@@ -1,0 +1,854 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Century Gothic, sans-serif;
+    cursor: default;
+}
+
+li {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    width: 1320px;
+}
+
+.header {
+    position: fixed;
+    width: 1320px;
+    text-align: center;
+    line-height: 70px;
+    color: white;
+    display: flex;
+    background-color: rgb(42, 152, 185);
+    z-index: 2;
+}
+
+.logo {
+    width: 300px;
+    font-size: 25px;
+}
+
+.logo a {
+    cursor: pointer;
+}
+
+.nav {
+    width: 700px;
+}
+
+.nav > ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav > ul > li {
+    width: 100px;
+}
+
+.nav > ul > li > a {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav > ul > li > a:hover {
+    color: rgb(243, 115, 33);
+    transition: 0.3s;
+}
+
+.nav > ul > li > a::after {
+    position: absolute;
+    content: "";
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: rgb(243, 115, 33);
+    overflow: hidden;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.4s ease;
+}
+
+.nav > ul > li > a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: all 0.4s ease;
+}
+
+.login {
+    width: 320px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.login a {
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.login a:hover {
+    color: #3a3a3a;
+}
+
+.imgslide {
+    width: 1320px;
+    height: 600px;
+    padding-top: 70px;
+    color: white;
+    overflow: hidden;
+}
+
+.slide {
+    position: relative;
+    width: 6600px;
+    height: 530px;
+    display: flex;
+    animation: slide infinite linear 10s;
+}
+
+.slide > div {
+    position: relative;
+    width: 1320px;
+    height: 530px;
+}
+
+.slide > div::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slide > div img {
+    width: 1320px;
+    height: 530px;
+}
+
+.t1 {
+    position: absolute;
+    top: 210px;
+    left: 20px;
+    font-size: 20px;
+    width: 400px;
+    opacity: 0.7;
+}
+
+.t1:hover {
+    color: rgb(243, 115, 33);
+    transition: 0.4s;
+    opacity: 1;
+}
+
+.t2 {
+    position: absolute;
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -25px;
+    font-size: 19px;
+}
+
+.t2:hover {
+    transform: scale(1.4);
+    transition: 0.4s;
+}
+
+.t3 {
+    position: absolute;
+    top: 210px;
+    right: 0;
+    font-size: 35px;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-left: 10px;
+}
+
+.t3:hover {
+    background-color: rgba(0, 0, 0, 1);
+    transition: 1s;
+}
+
+.t4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -300px;
+    width: 600px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes slide {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+
+.info {
+    width: 1320px;
+    height: 600px;
+    background-color: rgb(40, 40, 40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infob {
+    width: 1200px;
+    height: 400px;
+    display: flex;
+}
+
+.infob1 {
+    width: 580px;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.infob1 > div {
+    position: relative;
+    width: 580px;
+    height: 400px;
+}
+
+.infob1 > div::before {
+    position: absolute;
+    content: "Skills Baseball Park";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    opacity: 0;
+    font-size: 25px;
+    text-align: center;
+    line-height: 400px;
+}
+
+.infob1 > div:hover::before {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.infob1 > div img {
+    width: 580px;
+    height: 400px;
+}
+
+.infob2 {
+    position: relative;
+    width: 600px;
+    padding-left: 20px;
+    color: white;
+}
+
+.infob2 strong {
+    position: absolute;
+    top: 120px;
+    font-size: 25px;
+}
+
+.infob2 h4 {
+    position: absolute;
+    top: 210px;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.inbtn {
+    position: absolute;
+    top: 280px;
+}
+
+.inbtn button {
+    position: relative;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #d3d3d3;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: inherit;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.inbtn button:hover {
+    border-color: rgb(243, 115, 33);
+}
+
+.inbtn button::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(243, 115, 33);
+    transition: 0.4s;
+    z-index: -1;
+}
+
+.inbtn button:hover::after {
+    left: 0;
+    width: 100%;
+}
+
+.inbtn button a {
+    cursor: pointer;
+}
+
+.calendar {
+    width: 1320px;
+    height: 800px;
+    background-color: rgb(40, 40, 40);
+    border-top: 1px solid gray;
+}
+
+.daily {
+    width: 1320px;
+    color: white;
+}
+
+.year {
+    text-align: center;
+    line-height: 70px;
+    color: aliceblue;
+}
+
+.status {
+    width: 300px;
+    margin-left: 510px;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgb(243, 115, 33);
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.gamesc {
+    position: relative;
+    width: 1200px;
+    display: flex;
+    animation: gamesc infinite linear 6s;
+}
+
+.gamesc > div {
+    width: 300px;
+}
+
+.status:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+@keyframes gamesc {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+.cale {
+    width: 1320px;
+    height: 590px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    color: rgb(243, 115, 33);
+}
+
+th {
+    border: 2px solid gray;
+    font-size: 25px;
+    font-weight: bold;
+    height: 50px;
+}
+
+td {
+    border: 2px solid gray;
+    width: 100px;
+    height: 100px;
+    padding: 3px;
+    font-size: 25px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: rgba(42, 152, 185, 0.5);
+}
+
+.modal {
+    color: lightblue;
+}
+
+.mbtn {
+    padding-right: 66px;
+    padding-bottom: 62px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.molab {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    z-index: 2;
+    visibility: hidden;
+    transform: scale(0);
+    transition: 0.3s ease;
+}
+
+.mob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -70px;
+    margin-left: -150px;
+    width: 300px;
+    height: 140px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.closer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom-left-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.mt {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    line-height: 140px;
+    color: black;
+    font-size: 19px;
+}
+
+input#modal:checked ~ .molab {
+    visibility: visible;
+    transform: scale(1);
+    transition: 0.3s ease;
+}
+
+.rank {
+    width: 1320px;
+    height: 700px;
+    background-color: rgb(40, 40, 40);
+    border-top: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ranb {
+    width: 1200px;
+    height: 500px;
+    background-color: aliceblue;
+    display: flex;
+    color: white;
+    overflow: hidden;
+}
+
+.ranb1 {
+    width: 600px;
+}
+
+.ranh {
+    width: 600px;
+    text-align: center;
+    line-height: 70px;
+    background-color: rgb(32, 121, 148);
+    display: flex;
+}
+
+.rbtn {
+    padding: 5px 15px;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.rbtn:hover {
+    border-color: gray;
+    background-color: rgb(40, 40, 40);
+}
+
+.ranh1 {
+    width: 200px;
+}
+
+.ranh2 {
+    width: 200px;
+}
+
+.ranh3 {
+    width: 200px;
+}
+
+.select {
+    width: 600px;
+    text-align: center;
+    line-height: 50px;
+    display: flex;
+}
+
+.sbn {
+    padding: 3px 10px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 2px solid gray;
+    border-radius: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.sbn:hover {
+    background-color: #d3d3d3;
+}
+
+.select1 {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.select1-1 {
+    width: 80px;
+}
+
+.select1-2 {
+    width: 80px;
+}
+
+.select2 {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.select2-1 {
+    width: 80px;
+}
+
+.select2-2 {
+    width: 80px;
+}
+
+.select3 {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.select3-1 {
+    width: 80px;
+}
+
+.select3-2 {
+    width: 80px;
+}
+
+input#night:checked ~ .select1,
+input#week:checked ~ .select2,
+input#dawn:checked ~ .select3 {
+    visibility: visible;
+}
+
+.content {
+    width: 600px;
+    height: 380px;
+    display: flex;
+}
+
+.cont1 {
+    width: 200px;
+    display: flex;
+}
+
+.cont1-1 {
+    width: 100px;
+    visibility: hidden;
+}
+
+.cont1-2 {
+    width: 100px;
+    visibility: hidden;
+}
+
+.cont2 {
+    width: 200px;
+    display: flex;
+}
+
+.cont2-1 {
+    width: 100px;
+    visibility: hidden;
+}
+
+.cont2-2 {
+    width: 100px;
+    visibility: hidden;
+}
+
+.cont3 {
+    width: 200px;
+    display: flex;
+}
+
+.cont3-1 {
+    width: 100px;
+    visibility: hidden;
+}
+
+.cont3-2 {
+    width: 100px;
+    visibility: hidden;
+}
+
+.rlist {
+    text-align: center;
+    line-height: 50px;
+    color: black;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.rlist p {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.rlist i {
+    color: rgb(243, 115, 33);
+}
+
+input#pitch:checked ~ .cont1-1,
+input#hitter:checked ~ .cont1-2,
+input#pitch2:checked ~ .cont2-1,
+input#hitter2:checked ~ .cont2-2,
+input#pitch3:checked ~ .cont3-1,
+input#hitter3:checked ~ .cont3-2 {
+    visibility: visible;
+}
+
+.ranb2 {
+    width: 600px;
+}
+
+.acc {
+    padding-left: 40px;
+}
+
+.acclist {
+    width: 600px;
+    height: 0px;
+    background-color: rgb(32, 121, 148);
+    display: flex;
+    text-align: center;
+    line-height: 60px;
+    transition: 0.4s ease-out;
+}
+
+.acclist > div {
+    width: 100px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.4s ease-out;
+    
+}
+
+.acclist > div p {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.acclist > div i {
+    color: rgb(243, 115, 33);
+}
+
+input#accordion:checked ~ .acclist {
+    height: 430px;
+    transition: 0.4s ease-out;
+}
+
+input#accordion:checked ~ .acclist > div {
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: 0.4s ease-out;
+}
+
+.gallery {
+    position: relative;
+    width: 1320px;
+    height: 600px;
+    background-color: rgb(40, 40, 40);
+    border-top: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gallery p {
+    position: absolute;
+    top: 280px;
+    left: 10px;
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.gallery span {
+    position: absolute;
+    top: 280px;
+    right: 10px;
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.gallery span:hover,
+.gallery p:hover {
+    background-color: #3a3a3a;
+    border: none;
+    border-radius: 9px;
+}
+
+.gallimg {
+    margin-left: 1250px;
+    width: 1320px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.gallimg > div {
+    margin-left: 50px;
+    width: 220px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 9px;
+}
+
+.gallimg > div img {
+    width: 220px;
+    height: 200px;
+}
+
+.footer {
+    width: 1320px;
+    height: 250px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.footb {
+    width: 1200px;
+    height: 200px;
+}
+
+.footb h1 {
+    font-size: 30px;
+}
+
+.footb h3 {
+    padding-top: 20px;
+    font-weight: 200;
+}
+
+.footb h4 {
+    padding-top: 20px;
+    text-align: right;
+}
